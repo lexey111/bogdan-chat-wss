@@ -1,5 +1,5 @@
 import { makeAutoObservable, reaction } from "mobx"
-import { WssService } from "../components/wss/ws-service"
+import { WssService } from "../wss/ws-service"
 import { Message, User } from "../types"
 import { AppService } from "./app-service"
 

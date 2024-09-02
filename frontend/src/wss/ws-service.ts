@@ -1,4 +1,4 @@
-import { AppService, ChatState } from "../../state";
+import { AppService, ChatState } from "../state";
 
 const server = import.meta.env.VITE_SERVER;
 const wss_port = import.meta.env.VITE_WSS_PORT;

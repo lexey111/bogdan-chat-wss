@@ -1,4 +1,4 @@
-import { api } from "./api";
+import { api, isNormalResponse, LoginResult } from "./api";
 import { ChatState } from "./chat-state";
 
 export class AppService {
@@ -37,9 +37,9 @@ export class AppService {
         this.state.reset()
         this.state.busy = true
 
-        const response = await api.tryLoginToServer(userName);
+        const response: LoginResult = await api.tryLoginToServer(userName);
 
-        if (response && response.name && response.connectedAt) {
+        if (response && isNormalResponse(response)) {
             this.state.currentUserName = response.name;
             this.state.connectedAt = response.connectedAt;
             this.state.chat = [];

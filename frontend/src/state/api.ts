@@ -11,8 +11,16 @@ const usersEndpoint = `http://${server}:${port}/users`;
 const sendMessageEndpoint = `http://${server}:${port}/message`;
 const getMessagesEndpoint = `http://${server}:${port}/message`;
 
+export type LoginResultNormal = { name: string, connectedAt: string }
+export type LoginResultError = { error: string }
+export type LoginResult = LoginResultNormal | LoginResultError
+
+export function isNormalResponse(response: LoginResultNormal | LoginResultError): response is LoginResultNormal {
+    return typeof (response as LoginResultNormal).name !== 'undefined'
+}
+
 export const api = {
-    tryLoginToServer: async (name: string): Promise<{ name: string, connectedAt: string } | { error: string }> => {
+    tryLoginToServer: async (name: string): Promise<LoginResult> => {
         let result: { error: string } | User
 
         console.log('login', name);
