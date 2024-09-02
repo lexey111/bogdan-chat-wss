@@ -1,0 +1,58 @@
+.message-container {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.message-field {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    gap: 8px;
+    background: #ffffffc0;
+    border-radius: 8px;
+    transition: .2s ease;
+
+    input[type=text] {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    input[type=text]:hover {
+        background: transparent;
+        box-shadow: none;
+        border: none;
+    }
+
+    input[type=text]:focus {
+        background: transparent;
+        box-shadow: none;
+        border: none;
+    }
+
+    button {
+        box-shadow: none;
+        font-size: .8rem;
+        height: 30px;
+        margin-right: 5px;
+    }
+}
+
+.message-field:has(input:placeholder-shown) {
+    button {
+        opacity: 0;
+    }
+}
+
+.message-field:hover {
+    box-shadow: 0 0 0 2px #0099ff40;
+}
+
+.message-field:focus-within {
+    box-shadow: 0 0 0 2px #0099ffff;
+}

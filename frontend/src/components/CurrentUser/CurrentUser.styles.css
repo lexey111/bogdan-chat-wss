@@ -1,0 +1,37 @@
+.current-user-container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 16px;
+    height: 64px;
+}
+
+.current-user-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.current-user-actions {
+    margin-left: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: 16px;
+}
+
+.current-user-name {
+    font-weight: bold;
+}
+
+.current-user-connected {
+    opacity: .7;
+    font-weight: 200;
+    font-size: .8rem;
+}
+
+.user-connected-time {
+    font-weight: 200;
+    font-size: .8rem;
+    opacity: .7;
+}

@@ -1,0 +1,44 @@
+.chat-container {
+    background: #ffffffc0;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    flex-grow: 2;
+    overflow-y: auto;
+    border-radius: 8px;
+
+    .chat-content {
+        padding: 16px;
+        display: flex;
+        flex-flow: column wrap;
+        gap: 32px
+    }
+
+    .message-wrapper {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 8px;
+    }
+
+    .message-author, .message-time {
+        font-weight: bold;
+        font-size: .8rem;
+        margin-left: 14px;
+        color: #8ba1c8;
+    }
+
+    .message-content {
+        background-color: #8ba1c840;
+        padding: 16px;
+        border-radius: 8px;
+    }
+
+    .message-time{
+        font-weight: normal;
+    }
+
+    .message-footer {
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
